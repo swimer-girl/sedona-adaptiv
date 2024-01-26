@@ -1,0 +1,33 @@
+.purchase__title {
+  font-family: "PTSans", "Arial", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $basic-black;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 0 18px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+    margin: 0 0 34px 0;
+  }
+}
+
+.purchase__subtitle {
+  margin: 0 0 33px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 9px 0 27px;
+    margin: 0 0 45px 0;
+  }
+}
+
+.purchase__container {
+  padding: 43px 18px 47px 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 155px 56px 155px;
+  }
+}

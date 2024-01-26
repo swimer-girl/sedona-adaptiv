@@ -1,0 +1,52 @@
+.catalog__text {
+  text-align: center;
+  margin-bottom: 63px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+    padding: 0 110px;
+    margin-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 446px;
+    margin: 0 auto 90px auto;
+    padding: 0;
+  }
+}
+
+.catalog__title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+    margin-top: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 92px;
+    margin-bottom: 31px;
+  }
+}
+
+
+.catalog__wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 648px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

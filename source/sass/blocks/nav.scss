@@ -1,0 +1,86 @@
+
+.nav--closed .site-list {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav {
+  position: relative;
+}
+
+
+.nav__toggle {
+  display: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav--opened .nav__toggle {
+  display: block;
+  background: url("/img/icons/cross.svg") no-repeat center center;
+  width: 22px;
+  height: 22px;
+  border: none;
+  position: absolute;
+  top: 17px;
+  right: 19px;
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.nav--closed .nav__toggle {
+  display: block;
+  background: url("/img/icons/burger.svg") no-repeat center center;
+  width: 23px;
+  height: 22px;
+  border: none;
+  position: absolute;
+  top: 11px;
+  right: 21px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .site-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    background: #81b3d2;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+  }
+
+  .site-list__item {
+    border-top: 1px solid #e6e6e6;
+    text-align: center;
+    padding: 14px 0;
+  }
+
+  .site-list__link {
+    color: $basic-white;
+  }
+}
+

@@ -1,0 +1,10 @@
+
+.form__group {
+  border: none;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0 auto;
+  }
+}

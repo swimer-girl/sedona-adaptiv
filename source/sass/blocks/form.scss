@@ -1,0 +1,46 @@
+
+.form {
+  padding: 0;
+  margin: 0 auto 10px auto;
+  background-color: $basic-white;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 67px auto;
+  }
+}
+
+.form__text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 6px 0 0 142px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    padding: 32px 0 0 0;
+  }
+}
+
+.form__wrapper {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 160px;
+    max-width: 648px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 770px;
+    margin: 0 215px;
+  }
+}

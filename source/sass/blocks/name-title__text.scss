@@ -1,0 +1,13 @@
+.name-title__container .name-title__text {
+  padding: 0 0 0 70px;
+  margin: 0 0 21px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 28px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 00 132px 0;
+  }
+}
+

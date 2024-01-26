@@ -1,0 +1,90 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  @media (min-width: $tablet-width) {
+    gap: 12px;
+  }
+}
+
+.card__text {
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    color: #ffffff;
+  }
+}
+
+.card__title {
+  @include list-item-style;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 20px;
+    margin-top: -80px;
+    color: #ffffff;
+  }
+}
+
+.card__likes-counter {
+  font-weight: bold;
+  position: relative;
+  padding-left: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 31px;
+    bottom: 17px;
+    right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 21px;
+    mask-image: url("../img/sprite.svg#like");
+    mask-repeat: no-repeat;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    background-color: #000000;
+
+    @media (min-width: $desktop-width) {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.cards__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    gap: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+}
+
+.card__info-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,206 @@
+.hero__img {
+  background-color: $basic-blue;
+  width: 100%;
+}
+
+.hero__wrapper {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/icons/welcome-index.svg") no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/welcome-index-tablet.svg") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/icons/top-white-decor.svg") no-repeat center center;
+    position: absolute;
+    top: 163px;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      top: 227px;
+    }
+  }
+}
+
+.hero-form__wrapper {
+  position: relative;
+  width: 100%;
+
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/icons/text-sedona-mobile.svg") no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/welcome-index-tablet.svg") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+  }
+
+
+  &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: url("/img/icons/top-white-decor.svg") no-repeat center center;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      background: url("/img/icons/top-white-decor-tablet.svg") no-repeat center center;
+      top: 113px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background: url("/img/icons/top-white-decor-desktop.svg") no-repeat center center;
+      top: 118px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/text-sedona-tablet.svg") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+  }
+}
+
+.hero-catalog {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/icons/text-sedona-tablet.svg") no-repeat center center;
+    position: absolute;
+    top: -10px;
+    left: 0;
+  }
+}
+
+
+.hero-catalog__wrapper {
+  position: relative;
+  width: 100%;
+
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/icons/text-sedona-mobile.svg") no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/welcome-index-tablet.svg") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/welcome-index-desktop.svg") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+  }
+
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("/img/icons/top-white-decor.svg") no-repeat center center;
+    position: absolute;
+    top: 113px;
+    left: 0;
+
+
+    @media (min-width: $tablet-width) {
+      background: url("/img/icons/top-white-decor-tablet.svg") no-repeat center center;
+    }
+
+    @media (min-width: $desktop-width) {
+      background: url("/img/icons/top-white-decor-desktop.svg") no-repeat center center;
+      top: 118px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/img/icons/text-sedona-tablet.svg") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
+  }
+}
+
+.hero__picture-catalog {
+  @media (min-width: $desktop-width) {
+    top: 20px;
+  }
+}

@@ -1,0 +1,19 @@
+.attraction-title__text {
+  margin-top: 13px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 37px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+    margin-top: -26px;
+  }
+}
+
+.attraction-title__container {
+  max-width: 402px;
+}

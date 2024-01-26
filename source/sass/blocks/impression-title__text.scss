@@ -1,0 +1,18 @@
+.impression-title__text {
+  margin-top: 13px;
+  margin-bottom: 27px;
+  padding-left: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+    margin-top: 24px;
+    padding-left: 115px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+    margin-top: 24px;
+    padding-left: 295px;
+  }
+}

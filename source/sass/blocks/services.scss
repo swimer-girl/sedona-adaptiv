@@ -1,0 +1,136 @@
+.services__list,
+.services__item,
+.services__text {
+  @include list-item-style();
+}
+
+.services {
+  padding: 27px 23px 17px 65px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 331px;
+    padding: 151px 0 17px 0;
+  }
+}
+
+.services__text {
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding: 11px 36px 0 45px;
+  }
+}
+
+.services__title {
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.main-title--house {
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    min-height: 40px;
+    background: url("../../img/icons/house-mobile.svg") no-repeat center center;
+    position: absolute;
+    top: -9px;
+    left: -47px;
+
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 77px;
+      min-height: 72px;
+      background: url("../../img/sprite.svg#house-tablet-desktop") no-repeat center center;
+      position: absolute;
+      top: -94px;
+      left: 160px;
+    }
+  }
+}
+
+
+.main-title--food {
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    min-height: 40px;
+    background: url("../../img/sprite.svg#hamburger-mobile") no-repeat center center;
+    position: absolute;
+    top: -9px;
+    left: -47px;
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 77px;
+      min-height: 72px;
+      background: url("../../img/sprite.svg#hamburger-tablet-desktop") no-repeat center center;
+      position: absolute;
+      top: -94px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+
+.main-title--souvenirs {
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    min-height: 40px;
+    background: url("../../img/icons/present-mobile.svg") no-repeat center center;
+    position: absolute;
+    top: -9px;
+    left: -47px;
+
+
+    @media (min-width: $tablet-width) {
+      content: "";
+      display: block;
+      width: 77px;
+      min-height: 72px;
+      background: url("../../img/sprite.svg#present-tablet-desktop") no-repeat center center;
+      position: absolute;
+      top: -90px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.services__item {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+.services__list {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: unset;
+  }
+}

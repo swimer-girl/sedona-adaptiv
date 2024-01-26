@@ -1,0 +1,24 @@
+.group-emotions__wrapper {
+  width: 100%;
+}
+
+.form .group-emotions {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 215px;
+    min-width: 705px;
+  }
+}
+
+.group-emotions__title {
+  @media (min-width: $tablet-width) {
+    max-width: 402px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
