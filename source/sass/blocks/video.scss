@@ -1,68 +1,29 @@
-.video-presentation {
-  position: relative;
-}
-
-.video-presentation__button {
-  appearance: none;
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 54px;
-    background: url("../../img/icons/video-play.svg") no-repeat center center;
-    position: absolute;
-    bottom: 89px;
-    left: 116px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 250px;
-      left: 300px;
-    }
-
-    @media (min-width: $tablet-width) {
-      bottom: 270px;
-      left: 590px;
-    }
-  }
-}
-
-
-.video-presentation__title {
+.video {
+  padding: 17px 20px 0;
   text-align: center;
+}
 
-  @media (min-width: $tablet-width) {
+.video__title {
+  @include hero-title;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    padding: 29px 60px 40px;
+  }
+
+  .video__title {
     font-size: 30px;
-    line-height: 26px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 33px;
-  }
-}
-
-.video-presentation__text {
-  margin-top: 27px;
-  margin-bottom: 39px;
-  padding: 0 10px;
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 95px;
-    margin-bottom: 91px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 635px;
-    margin: 0 auto 110px auto;
+  .video__wrapper {
+    padding: 0 102px 33px 102px;
   }
 }
 
-.video-presentation__img {
-  @media (min-width: $desktop-width) {
-    object-fit: cover;
+@media (min-width: $desktop-width) {
+  .video {
+    padding: 84px 200px 84px;
   }
 }

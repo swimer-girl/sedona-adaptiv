@@ -1,28 +1,11 @@
 .button {
-  background-color: $basic-blue;
-  display: block;
-  color: $basic-white;
-  text-align: center;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
+  @include title;
+  font-family: inherit;
+  text-decoration: none;
   text-transform: uppercase;
-  padding: 16px 10px;
-
-  &:hover,
-  &:focus {
-    background-color: #669ec0;
-  }
-
-  &:active {
-    background-color: #5496bd;
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  &:disabled {
-    background-color: #e5e5e5;
-    color: #ffffff;
-  }
+  color: $light;
+  background-color: $base-bg;
+  cursor: pointer;
+  border: none;
+  display: block;
 }
-

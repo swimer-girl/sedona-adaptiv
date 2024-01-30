@@ -1,9 +1,0 @@
-
-.site-list__link {
-  @include no-list-decor;
-
-  &:hover,
-  &:focus {
-    color: #766357;
-  }
-}

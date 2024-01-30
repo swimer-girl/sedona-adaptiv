@@ -1,0 +1,29 @@
+.gallery__list {
+  @include list-reset;
+}
+
+.gallery__item {
+  padding: 24px 20px 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 42px 60px 29px;
+  }
+
+  .gallery__item {
+    padding: 0;
+  }
+
+  .gallery__item--header {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

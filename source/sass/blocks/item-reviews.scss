@@ -1,0 +1,15 @@
+.item-reviews__label--radio {
+  @include text-form;
+  text-transform: none;
+}
+
+.item-reviews__label--checkbox {
+  @include text-form;
+  text-transform: none;
+}
+
+.item-reviews__input {
+  @include text-form;
+  background-color: $second-bg;
+  border: none;
+}
