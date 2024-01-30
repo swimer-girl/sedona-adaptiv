@@ -1,11 +1,56 @@
 .services__item {
   background-color: $light;
-  padding: 25px 18px;
+  padding: 7px 18px 19px 65px;
   text-align: left;
+}
+
+.services__item--housing,
+.services__item--food,
+.services__item--souvenir {
+  position: relative;
+}
+
+.services__item--housing::before {
+  content: "";
+  display: block;
+  background-image: url("../../img/icon-house.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 18px;
+}
+
+.services__item--food::before {
+  content: "";
+  display: block;
+  background-image: url("../../img/icon-burger.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 18px;
+}
+
+.services__item--souvenir::before {
+  content: "";
+  display: block;
+  background-image: url("../../img/icon-gift.svg");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 18px;
+  padding: 1px 4px;
 }
 
 .services__list {
   @include list-reset;
+  padding: 16px 0 26px;
+  background-color: $light;
 }
 
 .services__title {
@@ -15,21 +60,61 @@
 
 .services__description {
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    br {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .services__item {
     text-align: center;
-    padding: 60px 33px;
+    padding: 158px 37px 60px;
+    min-width: 256px;
+  }
+
+  .services__item--food {
+    padding: 158px 50px 60px;
   }
 
   .services__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+
+  .services__item--housing::before {
+    width: 77px;
+    height: 74px;
+    left: 35%;
+    top: 57px;
+  }
+
+  .services__item--food::before {
+    width: 80px;
+    height: 75px;
+    left: 35%;
+    top: 56px;
+  }
+
+  .services__item--souvenir::before {
+    width: 67px;
+    height: 75px;
+    left: 35%;
+    top: 62px;
+  }
+
+  .services__title {
+    margin: 0;
+    margin-bottom: 23px;
+    font-size: 21px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .services__item {
-    padding: 69px 50px;
+    padding: 169px 50px 69px;
   }
 }

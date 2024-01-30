@@ -1,15 +1,85 @@
+.item-reviews__label {
+  padding-left: 16px;
+}
+
 .item-reviews__label--radio {
   @include text-form;
   text-transform: none;
+  display: block;
+  position: relative;
+  padding-left: 62px;
+  cursor: pointer;
+  height: 46px;
 }
 
 .item-reviews__label--checkbox {
   @include text-form;
   text-transform: none;
+  display: block;
+  position: relative;
+  padding-left: 62px;
+  cursor: pointer;
+  height: 46px;
 }
 
 .item-reviews__input {
   @include text-form;
   background-color: $second-bg;
   border: none;
+  width: 100%;
+  padding: 16px;
+}
+
+.item-reviews__input--phone {
+  background-image: url("../../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.item-reviews__input--mail {
+  background-image: url("../../img/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.item-reviews__control-input[type="checkbox"]:checked + .item-reviews__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background-image: url("../../img/check-mark-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-reviews__control-input[type="radio"]:checked + .item-reviews__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item-reviews__control-mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border: none;
+  background-color: $second-bg;
+  border-radius: 4px;
+  left: 0;
+}
+
+.item-reviews__control-mark--radio {
+  border-radius: 50%;
+}
+
+.item-reviews__control-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

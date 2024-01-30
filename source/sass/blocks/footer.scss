@@ -26,6 +26,12 @@
   .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 36px 60px;
+  }
+
+  .footer__social {
+    margin: 0;
   }
 }
 

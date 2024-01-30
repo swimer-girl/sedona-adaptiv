@@ -1,6 +1,10 @@
 .header {
   display: flex;
   position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    height: 56px;
+  }
 }
 
 .header__logo-image {

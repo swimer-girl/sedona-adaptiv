@@ -1,3 +1,49 @@
 .social__list {
   @include list-reset;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.social__item {
+  background-color: $base-bg;
+}
+
+.social__link--vkontakte {
+  display: block;
+  width: 48px;
+  height: 48px;
+  -webkit-mask-image: url("../../img/vk.svg"); /* stylelint-disable-line */
+  mask-image: url("../../img/vk.svg"); /* stylelint-disable-line */
+  -webkit-mask-position: center; /* stylelint-disable-line */
+  mask-position: center; /* stylelint-disable-line */
+  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
+  mask-repeat: no-repeat;
+  background-color: $light;
+}
+
+.social__link--telegram {
+  display: block;
+  width: 48px;
+  height: 48px;
+  -webkit-mask-image: url("../../img/telegram.svg"); /* stylelint-disable-line */
+  mask-image: url("../../img/telegram.svg"); /* stylelint-disable-line */
+  -webkit-mask-position: center; /* stylelint-disable-line */
+  mask-position: center; /* stylelint-disable-line */
+  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
+  mask-repeat: no-repeat; /* stylelint-disable-line */
+  background-color: $light;
+}
+
+.social__link--youtube {
+  display: block;
+  width: 48px;
+  height: 48px;
+  -webkit-mask-image: url("../../img/youtube.svg"); /* stylelint-disable-line */
+  mask-image: url("../../img/youtube.svg"); /* stylelint-disable-line */
+  -webkit-mask-position: center; /* stylelint-disable-line */
+  mask-position: center; /* stylelint-disable-line */
+  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
+  mask-repeat: no-repeat; /* stylelint-disable-line */
+  background-color: $light;
 }

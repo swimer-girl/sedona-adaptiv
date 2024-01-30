@@ -1,17 +1,27 @@
 .form-reviews__group {
   border: none;
   padding: 0;
-  padding-bottom: 30px;
   margin: 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .form-reviews__title {
   @include title;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .form-reviews__list {
   @include list-reset;
+}
+
+.form-reviews__list--name,
+.form-reviews__list--phone,
+.form-reviews__list--impression,
+.form-reviews__list--attractions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .form-reviews__description {
@@ -19,90 +29,225 @@
   border: none;
   background-color: $second-bg;
   width: 100%;
+  min-height: 150px;
   padding: 16px;
 }
 
-.item-reviews__input {
-  width: 100%;
-  padding: 16px;
+.form-reviews__group--name {
+  padding: 24px 20px 39px;
+}
+
+.form-reviews__group--phone {
+  padding: 24px 20px 34px;
+}
+
+.form-reviews__group--impression {
+  padding: 24px 20px;
+}
+
+.form-reviews__group--attractions {
+  padding: 24px 20px;
+}
+
+.form-reviews__group--emotions {
+  padding: 24px 20px 28px;
 }
 
 .form-reviews__button {
   text-align: right;
+  padding: 22px 20px;
 }
 
 .form-reviews__send-button {
   width: 100%;
   padding: 16px 49px;
+  font-size: 21px;
+}
+
+.form-reviews__send-text {
+  font-size: 12px;
+  margin: 0;
+  margin-top: 3px;
 }
 
 @media (min-width: $tablet-width) {
+  .form-reviews__group {
+    border: none;
+    position: relative;
+  }
+
   .form-reviews__wrapper {
     display: grid;
-    grid-template-columns: 295px 295px;
-    gap: 58px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-reviews__title {
+    font-size: 21px;
+  }
+
+  .form-reviews__description {
+    min-height: 160px;
   }
 
   .form-reviews__list--impression {
     display: grid;
-    grid-template-columns: 280px 280px;
-    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 8px;
   }
 
   .form-reviews__list--attractions {
     display: grid;
-    grid-template-columns: 224px 224px;
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 32px;
+  }
+
+  .form-reviews__group--name {
+    padding: 91px 28px 62px 60px;
+    position: relative;
+  }
+
+  .form-reviews__group--name::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 338px;
+    background-color: #dbdbdb;
+    top: 29px;
+    right: 0;
+  }
+
+  .form-reviews__group--phone {
+    padding: 91px 60px 62px 28px;
   }
 
   .form-reviews__group--impression {
-    padding: 40px 36px;
+    padding: 0 96px 48px;
   }
 
   .form-reviews__group--attractions {
-    padding: 40px 84px;
+    padding: 10px 144px 41px;
+  }
+
+  .form-reviews__group--emotions {
+    padding: 9px 60px 30px;
+  }
+
+  .form-reviews__group--name::before,
+  .form-reviews__group--impression::before,
+  .form-reviews__group--attractions::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    bottom: -14px;
+    left: 60px;
+  }
+
+  .form-reviews__group--phone::after,
+  .form-reviews__group--impression::after,
+  .form-reviews__group--attractions::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    bottom: -14px;
+    right: 60px;
+  }
+
+  .form-reviews__group--impression::before,
+  .form-reviews__group--impression::after {
+    bottom: -28px;
   }
 
   .form-reviews__button {
     display: flex;
-    padding: 48px 0 64px;
+    align-items: center;
+    padding: 12px 60px 64px;
+  }
+
+  .form-reviews__send-button {
+    padding: 16px 0;
   }
 
   .form-reviews__send-text {
     width: 100%;
+    font-size: 14px;
+    margin-top: 8px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .form-reviews__wrapper {
-    grid-template-columns: 430px 430px;
-    gap: 100px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .form-reviews__list--impression {
-    grid-template-columns: 280px 280px 280px;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 28px;
-    padding: 17px 53px;
+    margin: 0;
+    padding-left: 53px;
+    padding-right: 11px;
   }
 
   .form-reviews__list--attractions {
     display: grid;
-    grid-template-columns: 170px 170px 170px 170px;
-    gap: 64px;
-    padding: 31px 44px;
-    justify-items: center;
+    grid-template-columns: 1fr 0.97fr 0.9fr 1.1fr;
+    gap: 30px;
+    padding-left: 44px;
   }
 
-  .form-reviews__group--impression,
+  .form-reviews__group--name {
+    padding: 8px 49px 70px 120px;
+  }
+
+  .form-reviews__group--name::after {
+    top: -54px;
+  }
+
+  .form-reviews__group--phone {
+    padding: 8px 120px 70px 49px;
+  }
+
+  .form-reviews__group--impression {
+    padding: 25px 120px 74px;
+    gap: 10px;
+  }
+
   .form-reviews__group--attractions {
-    padding: 40px 0;
+    padding: 39px 120px 88px;
   }
 
   .form-reviews__group--emotions {
-    padding: 28px 96px;
+    padding: 7px 216px 24px;
+  }
+
+  .form-reviews__group--name::before,
+  .form-reviews__group--impression::before,
+  .form-reviews__group--attractions::before,
+  .form-reviews__group--phone::after,
+  .form-reviews__group--impression::after,
+  .form-reviews__group--attractions::after {
+    width: 280px;
+  }
+
+  .form-reviews__group--name::before,
+  .form-reviews__group--impression::before,
+  .form-reviews__group--attractions::before {
+    left: 120px;
+  }
+
+  .form-reviews__group--phone::after,
+  .form-reviews__group--impression::after,
+  .form-reviews__group--attractions::after {
+    right: 120px;
   }
 
   .form-reviews__button {
-    padding: 20px 96px;
+    padding: 19px 216px 64px;
   }
 }

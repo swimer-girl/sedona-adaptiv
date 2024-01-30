@@ -14,7 +14,7 @@
       <a class="header__logo">
         <img class="header__logo-image" src="/img/logo-sedona.svg" width="185" height="96" alt="Логотип «Седона».">
       </a>
-      <nav class="navigation">
+      <nav class="navigation navigation--closed navigation--nojs">
         <button class="navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -29,8 +29,6 @@
               Фото и видео
             </a>
           </li>
-        </ul>
-        <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="form.html" target="_blank">
               Форма отзыва
@@ -49,7 +47,7 @@
         <div class="hero__wrapper hero__wrapper--inner">
           <img class="hero__image--inner" src="/img/text-sedona.svg" width="100%" height="auto" alt="Седона.">
         </div>
-        <div class="hero__wrapper--title">
+        <div class="hero__title-wrapper">
           <h1 class="hero__title">Фото и видео</h1>
           <p class="hero__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
@@ -58,40 +56,60 @@
         <h2 class="visually-hidden">Фотогалерея Седоны.</h2>
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--header item-gallery">
-            <img class="item-gallery__image" src="/img/gallery/photo-1.jpg" width="100%" height="auto" alt="Дорога и закат.">
-            <h3 class="item-gallery__title">Неродные просторы</h3>
-            <p class="item-gallery__author">Автор фото: Борис</p>
-            <button class="item-gallery__like like-button like-button__icon" type="button">
-              <span class="visually-hidden">Поставить лайк</span>
-              <span class="like-button__number">1350</span>
-            </button>
+            <img class="item-gallery__image item-gallery__image--first" src="/img/gallery/photo-1.jpg" width="100%" height="auto" alt="Дорога и закат.">
+            <div class="item-gallery__wrapper">
+              <div class="item-gallery__title-wrapper">
+                <h3 class="item-gallery__title">Неродные просторы</h3>
+                <p class="item-gallery__author">Автор фото: Борис</p>
+              </div>
+              <button class="item-gallery__like like-button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="like-button__icon"></span>
+                <span class="like-button__number">1350</span>
+              </button>
+            </div>
           </li>
           <li class="gallery__item item-gallery">
             <img class="item-gallery__image" src="/img/gallery/photo-2.jpg" width="100%" height="auto" alt="Растения Седоны.">
-            <h3 class="item-gallery__title">Местная растительность</h3>
-            <p class="item-gallery__author">Автор фото: Сергей</p>
-            <button class="item-gallery__like like-button like-button__icon" type="button">
-              <span class="visually-hidden">Поставить лайк</span>
-              <span class="like-button__number">143</span>
-            </button>
+            <div class="item-gallery__wrapper">
+              <div class="item-gallery__title-wrapper">
+                <h3 class="item-gallery__title">Местная растительность</h3>
+                <p class="item-gallery__author">Автор фото: Сергей</p>
+              </div>
+              <button class="item-gallery__like like-button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="like-button__icon"></span>
+                <span class="like-button__number">143</span>
+              </button>
+            </div>
           </li>
           <li class="gallery__item item-gallery">
             <img class="item-gallery__image" src="/img/gallery/photo-3.jpg" width="100%" height="auto" alt="Дорога в горах.">
-            <h3 class="item-gallery__title">Дорога на север</h3>
-            <p class="item-gallery__author">Автор фото: Петр</p>
-            <button class="item-gallery__like like-button like-button__icon" type="button">
-              <span class="visually-hidden">Поставить лайк</span>
-              <span class="like-button__number">96</span>
-            </button>
+            <div class="item-gallery__wrapper">
+              <div class="item-gallery__title-wrapper">
+                <h3 class="item-gallery__title">Дорога на север</h3>
+                <p class="item-gallery__author">Автор фото: Петр</p>
+              </div>
+              <button class="item-gallery__like like-button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="like-button__icon"></span>
+                <span class="like-button__number">96</span>
+              </button>
+            </div>
           </li>
           <li class="gallery__item item-gallery">
             <img class="item-gallery__image" src="/img/gallery/photo-4.jpg" width="100%" height="auto" alt="Каньон Седоны.">
-            <h3 class="item-gallery__title">Дорога на север</h3>
-            <p class="item-gallery__author">Автор фото: Петр</p>
-            <button class="item-gallery__like like-button like-button__icon" type="button">
-              <span class="visually-hidden">Поставить лайк</span>
-              <span class="like-button__number">254</span>
-            </button>
+            <div class="item-gallery__wrapper">
+              <div class="item-gallery__title-wrapper">
+                <h3 class="item-gallery__title">Мост дьявола</h3>
+                <p class="item-gallery__author">Автор фото: Антон</p>
+              </div>
+              <button class="item-gallery__like like-button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="like-button__icon"></span>
+                <span class="like-button__number">254</span>
+              </button>
+            </div>
           </li>
         </ul>
       </section>
@@ -101,8 +119,7 @@
           <p class="video__title">Все еще сомневаетесь?</p>
           <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <video class="video__play" width="100%" height="auto" controls="controls" poster="/img/video-poster.jpg">
-          <source src="#">
+        <video class="video__play" width="100%" height="auto" poster="/img/video-poster.jpg" source src="#">
         </video>
       </section>
     </main>
@@ -140,6 +157,7 @@
       </div>
     </footer>
   </div>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

@@ -14,10 +14,12 @@
       <a class="header__logo">
         <img class="header__logo-image" src="/img/logo-sedona.svg" width="185" height="96" alt="Логотип «Седона».">
       </a>
-      <nav class="navigation">
-        <button class="navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <nav class="navigation navigation--closed navigation--nojs">
+        <div class="navigation__toggle-wrapper">
+          <button class="navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="index.html">
@@ -29,8 +31,6 @@
               Фото и видео
             </a>
           </li>
-        </ul>
-        <ul class="navigation__list">
           <li class="navigation__item navigation__item--current">
             <a class="navigation__link" href="form.html" target="_blank">
               Форма отзыва
@@ -47,20 +47,20 @@
     <main class="main-container">
       <section class="hero">
         <div class="hero__wrapper hero__wrapper--inner">
-          <img class="hero__image--inner" src="/img/text-sedona.svg" width="459" height="80" alt="Седона.">
+          <img class="hero__image--inner" src="/img/text-sedona.svg" width="100%" height="auto" alt="Седона.">
         </div>
-        <div class="hero__wrapper--title">
-          <h1 class="hero-inner__title">Оставьте свой отзыв</h1>
-          <p class="hero-inner__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <div class="hero__title-wrapper hero__title-wrapper--reviews">
+          <h1 class="hero__title hero__title--reviews">Оставьте свой отзыв</h1>
+          <p class="hero__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
       </section>
       <section class="reviews">
         <h2 class="visually-hidden">Заполните поля формы.</h2>
         <form class="reviews__form form-reviews" action="https://echo.htmlacademy.ru/" method="get">
           <div class="form-reviews__wrapper">
-            <fieldset class="form-reviews__group">
+            <fieldset class="form-reviews__group form-reviews__group--name">
               <legend class="form-reviews__title">Представьтесь:</legend>
-              <ul class="form-reviews__list">
+              <ul class="form-reviews__list form-reviews__list--name">
                 <li class="form-reviews__item item-reviews">
                   <label class="item-reviews__label" for="name">Имя*:</label>
                   <input class="item-reviews__input" type="text" name="name" placeholder="Имя" value="Пётр" id="name" required>
@@ -75,16 +75,16 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form-reviews__group">
+            <fieldset class="form-reviews__group form-reviews__group--phone">
               <legend class="form-reviews__title">Контактная информация:</legend>
-              <ul class="form-reviews__list">
+              <ul class="form-reviews__list form-reviews__list--phone">
                 <li class="form-reviews__item item-reviews">
                   <label class="item-reviews__label" for="number">Контактный телефон*:</label>
-                  <input class="item-reviews__input" type="tel" name="phone" placeholder="Введите телефон" id="number" required>
+                  <input class="item-reviews__input item-reviews__input--phone" type="tel" name="phone" placeholder="Введите телефон" id="number" required>
                 </li>
                 <li class="form-reviews__item item-reviews">
                   <label class="item-reviews__label" for="email">Электронная почта*:</label>
-                  <input class="item-reviews__input" type="email" name="mail" placeholder="Введите e-mail" id="email" required>
+                  <input class="item-reviews__input item-reviews__input--mail" type="email" name="mail" placeholder="Введите e-mail" id="email" required>
                 </li>
               </ul>
             </fieldset>
@@ -93,44 +93,65 @@
             <legend class="form-reviews__title">Ваше общее впечатление:</legend>
             <ul class="form-reviews__list form-reviews__list--impression">
               <li class="form-reviews__item item-reviews">
-                <input type="radio" name="impression" id="positive" value="positive" checked>
-                <label class="item-reviews__label--radio" for="positive">Скорее положительное</label>
+                <label class="item-reviews__label--radio" for="positive">
+                  <input class="visually-hidden item-reviews__control-input" type="radio" name="impression" id="positive" value="positive" checked>
+                  <span class="item-reviews__control-mark item-reviews__control-mark--radio"></span>
+                  <span class="item-reviews__control-label">Скорее положительное</span>
+                </label>
               </li>
               <li class="form-reviews__item item-reviews">
-                <input type="radio" name="impression" id="negative" value="negative">
-                <label class="item-reviews__label--radio" for="negative">Скорее отрицательное</label>
+                <label class="item-reviews__label--radio" for="negative">
+                  <input class="visually-hidden item-reviews__control-input" type="radio" name="impression" id="negative" value="negative">
+                  <span class="item-reviews__control-mark item-reviews__control-mark--radio"></span>
+                  <span class="item-reviews__control-label">Скорее отрицательное</span>
+                </label>
               </li>
               <li class="form-reviews__item item-reviews">
-                <input type="radio" name="impression" id="difficult" value="difficult">
-                <label class="item-reviews__label--radio" for="difficult">Затрудняюсь ответить</label>
+                <label class="item-reviews__label--radio" for="difficult">
+                  <input class="visually-hidden item-reviews__control-input" type="radio" name="impression" id="difficult" value="difficult">
+                  <span class="item-reviews__control-mark item-reviews__control-mark--radio"></span>
+                  <span class="item-reviews__control-label">Затрудняюсь ответить</span>
+                </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form-reviews__group form-reviews__group--attractions">
-            <legend class="form-reviews__title">Посещенные достопримечательности:</legend>
+            <legend class="form-reviews__title">Посещенные <br>достопримечательности:</legend>
             <ul class="form-reviews__list form-reviews__list--attractions">
               <li class="form-reviews__item item-reviews">
-                <input type="checkbox" name="bridge" id="bridge" checked>
-                <label class="item-reviews__label--checkbox" for="bridge">Мост Дьявола</label>
+                <label class="item-reviews__label--checkbox" for="bridge">
+                  <input class="visually-hidden item-reviews__control-input" type="checkbox" name="bridge" id="bridge" checked>
+                  <span class="item-reviews__control-mark"></span>
+                  <span class="item-reviews__control-label">Мост Дьявола</span>
+                </label>
               </li>
               <li class="form-reviews__item item-reviews">
-                <input type="checkbox" name="mountain" id="mountain" checked>
-                <label class="item-reviews__label--checkbox" for="mountain">Гора-Колокол</label>
+                <label class="item-reviews__label--checkbox" for="mountain">
+                  <input class="visually-hidden item-reviews__control-input" type="checkbox" name="mountain" id="mountain" checked>
+                  <span class="item-reviews__control-mark"></span>
+                  <span class="item-reviews__control-label">Гора-Колокол</span>
+                </label>
               </li>
               <li class="form-reviews__item item-reviews">
-                <input type="checkbox" name="park" id="park" checked>
-                <label class="item-reviews__label--checkbox" for="park">Слайд-парк</label>
+                <label class="item-reviews__label--checkbox" for="park">
+                  <input class="visually-hidden item-reviews__control-input" type="checkbox" name="park" id="park" checked>
+                  <span class="item-reviews__control-mark"></span>
+                  <span class="item-reviews__control-label">Слайд-парк</span>
+                </label>
               </li>
               <li class="form-reviews__item item-reviews">
-                <input type="checkbox" name="rocks" id="rocks">
-                <label class="item-reviews__label--checkbox" for="rocks">Красные скалы</label>
+                <label class="item-reviews__label--checkbox" for="rocks">
+                  <input class="visually-hidden item-reviews__control-input" type="checkbox" name="rocks" id="rocks">
+                  <span class="item-reviews__control-mark"></span>
+                  <span class="item-reviews__control-label">Красные скалы</span>
+                </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form-reviews__group form-reviews__group--emotions">
             <legend class="form-reviews__title">Опишите свои эмоции:</legend>
             <label for="details">
-              <textarea class="form-reviews__description" name="details" rows="5" placeholder="Опишите подробно все свои восторги" id="details"></textarea>
+              <textarea class="form-reviews__description" name="details" placeholder="Опишите подробно все свои восторги" id="details"></textarea>
             </label>
           </fieldset>
           <div class="form-reviews__button">
@@ -187,6 +208,7 @@
       </div>
     </div>
   </div>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

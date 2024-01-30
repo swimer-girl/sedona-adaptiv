@@ -14,10 +14,17 @@
 .search__description {
   margin: 0;
   margin-bottom: 32px;
+
+  @media (max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .search__button {
   padding: 16px 0;
+  font-size: 21px;
 }
 
 @media (min-width: $tablet-width) {
@@ -27,6 +34,11 @@
 
   .search__title {
     font-size: 30px;
+    margin-bottom: 32px;
+  }
+
+  .search__description {
+    margin-bottom: 45px;
   }
 }
 

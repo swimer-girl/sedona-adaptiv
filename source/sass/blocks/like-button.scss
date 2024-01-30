@@ -1,3 +1,45 @@
 .like-button {
-  background-color: $light;
+  font-family: inherit;
+  border: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.like-button__number {
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.like-button__icon {
+  display: block;
+  -webkit-mask-image: url("../../img/like-icon.svg"); /* stylelint-disable-line */
+  mask-image: url("../../img/like-icon.svg"); /* stylelint-disable-line */
+  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
+  mask-repeat: no-repeat; /* stylelint-disable-line */
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 23px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .like-button__icon {
+    top: 8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .like-button__number {
+    color: $light;
+  }
+
+  .like-button__icon {
+    background-color: $light;
+  }
 }
