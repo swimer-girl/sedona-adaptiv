@@ -4,7 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Седона</title>
+  <title>Фото и видео Седона</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -56,7 +60,11 @@
         <h2 class="visually-hidden">Фотогалерея Седоны.</h2>
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--header item-gallery">
-            <img class="item-gallery__image item-gallery__image--first" src="/img/gallery/photo-1.jpg" width="100%" height="auto" alt="Дорога и закат.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/gallery/photo-1-desktop@1x.jpg 1x, img/gallery/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="/img/gallery/photo-1-tablet@1x.jpg 1x, img/gallery/photo-1-tablet@2x.jpg 2x">
+              <img class="item-gallery__image item-gallery__image--first" src="/img/gallery/photo-1-phone@1x.jpg" srcset="img/gallery/photo-1-phone@2x.jpg 2x" width="100%" height="auto" alt="Дорога и закат.">
+            </picture>
             <div class="item-gallery__wrapper">
               <div class="item-gallery__title-wrapper">
                 <h3 class="item-gallery__title">Неродные просторы</h3>
@@ -70,7 +78,11 @@
             </div>
           </li>
           <li class="gallery__item item-gallery">
-            <img class="item-gallery__image" src="/img/gallery/photo-2.jpg" width="100%" height="auto" alt="Растения Седоны.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/gallery/photo-2-desktop@1x.jpg 1x, img/gallery/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="/img/gallery/photo-2-tablet@1x.jpg 1x, img/gallery/photo-2-tablet@2x.jpg 2x">
+              <img class="item-gallery__image" src="/img/gallery/photo-2-phone@1x.jpg" srcset="img/gallery/photo-2-phone@2x.jpg 2x" width="100%" height="auto" alt="Растения Седоны.">
+            </picture>
             <div class="item-gallery__wrapper">
               <div class="item-gallery__title-wrapper">
                 <h3 class="item-gallery__title">Местная растительность</h3>
@@ -84,7 +96,11 @@
             </div>
           </li>
           <li class="gallery__item item-gallery">
-            <img class="item-gallery__image" src="/img/gallery/photo-3.jpg" width="100%" height="auto" alt="Дорога в горах.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/gallery/photo-3-desktop@1x.jpg 1x, img/gallery/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="/img/gallery/photo-3-tablet@1x.jpg 1x, img/gallery/photo-3-tablet@2x.jpg 2x">
+              <img class="item-gallery__image" src="/img/gallery/photo-3-phone@1x.jpg" srcset="img/gallery/photo-3-phone@2x.jpg 2x" width="100%" height="auto" alt="Дорога в горах.">
+            </picture>
             <div class="item-gallery__wrapper">
               <div class="item-gallery__title-wrapper">
                 <h3 class="item-gallery__title">Дорога на север</h3>
@@ -98,7 +114,11 @@
             </div>
           </li>
           <li class="gallery__item item-gallery">
-            <img class="item-gallery__image" src="/img/gallery/photo-4.jpg" width="100%" height="auto" alt="Каньон Седоны.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/gallery/photo-4-desktop@1x.jpg 1x, img/gallery/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="/img/gallery/photo-4-tablet@1x.jpg 1x, img/gallery/photo-4-tablet@2x.jpg 2x">
+              <img class="item-gallery__image" src="/img/gallery/photo-4-phone@1x.jpg" srcset="img/gallery/photo-4-phone@2x.jpg 2x" width="100%" height="auto" alt="Каньон Седоны.">
+            </picture>
             <div class="item-gallery__wrapper">
               <div class="item-gallery__title-wrapper">
                 <h3 class="item-gallery__title">Мост дьявола</h3>
@@ -119,7 +139,7 @@
           <p class="video__title">Все еще сомневаетесь?</p>
           <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <video class="video__play" width="100%" height="auto" poster="/img/video-poster.jpg" source src="#">
+        <video class="video__play" width="100%" height="auto">
         </video>
       </section>
     </main>

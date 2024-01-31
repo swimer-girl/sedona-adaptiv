@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -61,7 +65,11 @@
               <p class="item-advantages__number">— №1 —</p>
               <p class="item-advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="item-advantages__image" src="/img/cafe-sedona.jpg" width="100%" height="auto" alt="Кафе в Седоне.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/cafe-desktop@1x.jpg 1x, img/cafe-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/cafe-tablet@1x.jpg 1x, img/cafe-tablet@2x.jpg 2x">
+              <img class="item-advantages__image" src="/img/cafe-phone@1x.jpg" srcset="img/cafe-phone@2x.jpg 2x" width="100%" height="auto" alt="Кафе в Седоне.">
+            </picture>
           </li>
           <li class="advantages__item">
             <section class="services">
@@ -83,7 +91,11 @@
             </section>
           </li>
           <li class="advantages__item advantages__item--with-img advantages__item--reverse item-advantages">
-            <img class="item-advantages__image" src="/img/canyon-sedona.jpg" width="100%" height="auto" alt="Каньон в Седоне.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/canyon-desktop@1x.jpg 1x, img/canyon-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/canyon-tablet@1x.jpg 1x, img/canyon-tablet@2x.jpg 2x">
+              <img class="item-advantages__image" src="/img/canyon-phone@1x.jpg" srcset="img/canyon-phone@2x.jpg 2x" width="100%" height="auto" alt="Каньон в Седоне.">
+            </picture>
             <div class="item-advantages__wrapper item-advantages__wrapper--with-img ">
               <h3 class="item-advantages__title item-advantages__title--light">Там есть <br>мост дьявола</h3>
               <p class="item-advantages__number">— №2 —</p>
@@ -121,7 +133,7 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Местоположение Седоны на карте.</h2>
-        <img class="map__image" src="/img/map.png" width="100%" height="auto" alt="Карта с местоположением Седоны в штате Аризона.">
+        <img class="map__image" src="/img/map@1x.png" width="100%" height="auto" srcset="img/map@2x.png 2x" alt="Карта с местоположением Седоны в штате Аризона.">
       </section>
     </main>
     <footer class="footer">
