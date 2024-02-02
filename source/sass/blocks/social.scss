@@ -13,12 +13,14 @@
   display: block;
   width: 48px;
   height: 48px;
-  -webkit-mask-image: url("../../img/vk.svg"); /* stylelint-disable-line */
-  mask-image: url("../../img/vk.svg"); /* stylelint-disable-line */
+  -webkit-mask-image: url("../../img/stack.svg#vk-icon"); /* stylelint-disable-line */
+  mask-image: url("../../img/stack.svg#vk-icon"); /* stylelint-disable-line */
   -webkit-mask-position: center; /* stylelint-disable-line */
   mask-position: center; /* stylelint-disable-line */
   -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
   mask-repeat: no-repeat;
+  -webkit-mask-size: 24px 24px; /* stylelint-disable-line */
+  mask-size: 24px 24px; /* stylelint-disable-line */
   background-color: $light;
 }
 
@@ -26,12 +28,14 @@
   display: block;
   width: 48px;
   height: 48px;
-  -webkit-mask-image: url("../../img/telegram.svg"); /* stylelint-disable-line */
-  mask-image: url("../../img/telegram.svg"); /* stylelint-disable-line */
+  -webkit-mask-image: url("../../img/stack.svg#telegram-icon"); /* stylelint-disable-line */
+  mask-image: url("../../img/stack.svg#telegram-icon"); /* stylelint-disable-line */
   -webkit-mask-position: center; /* stylelint-disable-line */
   mask-position: center; /* stylelint-disable-line */
   -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
   mask-repeat: no-repeat; /* stylelint-disable-line */
+  -webkit-mask-size: 24px 24px; /* stylelint-disable-line */
+  mask-size: 24px 24px; /* stylelint-disable-line */
   background-color: $light;
 }
 
@@ -39,11 +43,13 @@
   display: block;
   width: 48px;
   height: 48px;
-  -webkit-mask-image: url("../../img/youtube.svg"); /* stylelint-disable-line */
-  mask-image: url("../../img/youtube.svg"); /* stylelint-disable-line */
+  -webkit-mask-image: url("../../img/stack.svg#youtube-icon"); /* stylelint-disable-line */
+  mask-image: url("../../img/stack.svg#youtube-icon"); /* stylelint-disable-line */
   -webkit-mask-position: center; /* stylelint-disable-line */
   mask-position: center; /* stylelint-disable-line */
   -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
   mask-repeat: no-repeat; /* stylelint-disable-line */
+  -webkit-mask-size: 24px 24px; /* stylelint-disable-line */
+  mask-size: 24px 24px; /* stylelint-disable-line */
   background-color: $light;
 }

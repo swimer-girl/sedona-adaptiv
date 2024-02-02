@@ -31,23 +31,27 @@
 }
 
 .item-reviews__input--phone {
-  background-image: url("../../img/phone-icon.svg");
-  background-repeat: no-repeat;
-  background-position: right;
+  background-image: url("../../img/stack.svg#phone-icon");
 }
 
 .item-reviews__input--mail {
-  background-image: url("../../img/mail-icon.svg");
+  background-image: url("../../img/stack.svg#mail-icon");
+}
+
+.item-reviews__input--mail,
+.item-reviews__input--phone {
   background-repeat: no-repeat;
   background-position: right;
+  background-size: 58px;
 }
 
 .item-reviews__control-input[type="checkbox"]:checked + .item-reviews__control-mark::before {
   content: "";
   position: absolute;
-  width: 46px;
+  width: 22px;
   height: 46px;
-  background-image: url("../../img/check-mark-icon.svg");
+  left: 12px;
+  background-image: url("../../img/stack.svg#check-mark-icon");
   background-repeat: no-repeat;
   background-position: center;
 }

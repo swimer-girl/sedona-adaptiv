@@ -17,7 +17,7 @@
 }
 
 .navigation__toggle {
-  position: absolute;
+  position: relative;
   border: none;
   padding: 0;
   width: 63px;
@@ -25,9 +25,7 @@
   display: block;
   background-color: transparent;
   cursor: pointer;
-  right: 0;
-  top: 0;
-  z-index: 2;
+  margin-left: auto;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -63,6 +61,7 @@
     width: 28px;
     height: 4px;
     background-color: $light;
+    z-index: 2;
   }
 
   .navigation--opened .navigation__toggle::before {
@@ -82,7 +81,9 @@
   }
 
   .navigation--opened .navigation__list {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 0;
   }
 
   .navigation--opened .navigation__list::after {

@@ -3,15 +3,17 @@
 }
 
 .hero__wrapper {
-  background-image: url("../../img/index-hero-zigzag.svg"), url("../../img/index-hero-background.jpg");
+  background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../../img/index-hero-background.jpg");
   background-color: $base-bg;
   background-repeat: no-repeat;
   background-position: center bottom, 50% 30%;
-  background-size: auto, cover;
+  background-size: 1200px 57px, cover;
   padding: 90px 19px 85px;
 }
 
 .hero__wrapper--inner {
+  background-position: center bottom, 50% bottom;
+  background-size: 1200px 57px, 282% auto;
   padding: 52px 46px 67px;
 }
 
@@ -44,6 +46,12 @@
   margin: 0;
 }
 
+@media (min-resolution: 2dppx) {
+  .hero__wrapper {
+    background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../img/index-hero-background@2x.jpg");
+  }
+}
+
 @media (max-width: $mobile-width-only) {
   .hero__title-wrapper {
     border-bottom: 1px solid #e5e5e5;
@@ -56,6 +64,8 @@
   }
 
   .hero__wrapper--inner {
+    background-position: center bottom, 50% bottom;
+    background-size: 1200px 57px, 156% auto;
     padding: 95px 154px 116px 157px;
   }
 
@@ -92,6 +102,8 @@
   }
 
   .hero__wrapper--inner {
+    background-position: center bottom, 50% bottom;
+    background-size: 1200px 57px, 100% auto;
     padding: 101px 371px 120px 369px;
   }
 
