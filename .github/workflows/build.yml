@@ -4,6 +4,8 @@ on:
       - main
   pull_request:
     branches: '*'
+permissions:
+  contents: write
 
 name: Project build
 jobs:
