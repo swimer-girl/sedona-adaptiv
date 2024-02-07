@@ -3,7 +3,7 @@
 }
 
 .hero__wrapper {
-  background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../../img/index-hero-background.jpg");
+  background-image: url("img/stack.svg#index-hero-zigzag"), url("img/index-hero-background.jpg");
   background-color: $base-bg;
   background-repeat: no-repeat;
   background-position: center bottom, 50% 30%;
@@ -48,7 +48,7 @@
 
 @media (min-resolution: 2dppx) {
   .hero__wrapper {
-    background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../img/index-hero-background@2x.jpg");
+    background-image: url("img/stack.svg#index-hero-zigzag"), url("img/index-hero-background@2x.jpg");
   }
 }
 
