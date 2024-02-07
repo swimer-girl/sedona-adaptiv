@@ -30,9 +30,10 @@ jobs:
           npm run build
 
       - name: Change base-tag in index.html from / to sedona-adaptiv
-        run: sed -i 's/<base href="\/" \/>/<base href="\/sedona-adaptiv\/" \/>/g' build/*.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/sedona-adaptiv\/" \/>/g' build/index.html
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
+          branch: gh-pages
           folder: build
 
