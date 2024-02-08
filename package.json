@@ -28,7 +28,10 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "build:sass": "sass --style=compressed source/sass build/css/style.min.css",
+    "build:eleventy": "eleventy",
+    "build:github": "npm-run-all build:*"
   },
   "browserslist": [
     "last 2 versions",
