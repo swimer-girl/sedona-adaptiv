@@ -28,13 +28,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp",
-    "build:sass": "sass source/sass:public/static/css",
-    "build:eleventy": "ELEVENTY_ENV=development eleventy",
-    "build:github": "npm run build:eleventy & npm run build:sass",
-    "build:sass:prod": "sass source/sass:public/static/css --style compressed",
-    "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
-    "build:prod": "npm run build:eleventy:prod & npm run build:sass:prod"
+    "start": "gulp"
   },
   "browserslist": [
     "last 2 versions",
@@ -52,9 +46,5 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module",
-  "dependencies": {
-    "@11ty/eleventy": "2.0.1",
-    "sass": "1.70.0"
-  }
+  "type": "module"
 }
