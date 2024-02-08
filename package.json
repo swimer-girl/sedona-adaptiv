@@ -31,7 +31,7 @@
     "start": "gulp",
     "build:sass": "sass --style=compressed source/sass build/css/style.min.css",
     "build:eleventy": "eleventy",
-    "build:github": "npm-run-all build:*"
+    "build:github": "npm run build:eleventy & npm run build:sass"
   },
   "browserslist": [
     "last 2 versions",
