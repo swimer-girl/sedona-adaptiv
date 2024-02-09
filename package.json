@@ -9,6 +9,7 @@
     "del": "6.0.0",
     "gulp": "4.0.2",
     "gulp-dart-sass": "^1.0.2",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "5.0.1",
     "gulp-libsquoosh": "^1.0.9",
     "gulp-plumber": "1.2.1",
@@ -29,9 +30,7 @@
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp",
-    "build:sass": "sass --style=compressed source/sass:build/css",
-    "build:eleventy": "eleventy",
-    "build:github": "npm run build:eleventy & npm run build:sass"
+    "deploy": "gulp build && gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",

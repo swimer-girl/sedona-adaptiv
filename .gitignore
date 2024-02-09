@@ -12,5 +12,3 @@ source/css/*.css
 source/css/*.map
 Thumbs.db
 build
-gh-pages
-gh-pages.pub

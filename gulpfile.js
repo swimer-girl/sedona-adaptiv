@@ -13,6 +13,7 @@ import svgo from 'gulp-svgmin';
 import {stacksvg} from 'gulp-stacksvg';
 import del from 'del';
 import browser from 'browser-sync';
+import ghPages from 'gulp-gh-pages';
 
 // Styles
 
@@ -164,3 +165,17 @@ export default gulp.series(
     server,
     watcher
   ));
+
+//Deploy
+
+// const paths = {
+//   scripts: (
+//     src: 'source',
+//     dest: 'build',
+//   )
+// }
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
