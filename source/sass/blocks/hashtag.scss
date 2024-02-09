@@ -3,3 +3,11 @@
   font-style: 21px;
   text-decoration: none;
 }
+
+.hashtag__link:hover {
+  color: $base-bg;
+}
+
+.hashtag__link:active {
+  color: #b3b3b3;
+}

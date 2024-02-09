@@ -4,37 +4,27 @@
   margin-bottom: 9px;
 }
 
-.map::before {
-  content: "";
+.map__yandex {
+  border: none;
   display: block;
-  background-image: url("../../img/stack.svg#map-marker");
-  width: 27px;
-  height: 27px;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 46%;
-  bottom: 46%;
+  width: 100%;
 }
 
 .map__image {
-  background-color: $base-bg;
-  min-height: 350px;
   object-fit: cover;
+  width: 100%;
+}
+
+.map__background {
+  display: block;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  top: 0;
 }
 
 @media (min-width: $tablet-width) {
   .map {
     margin: 0;
-  }
-
-  .map::before {
-    left: 48%;
-    bottom: 46%;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .map::before {
-    left: 49%;
   }
 }

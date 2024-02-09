@@ -1,17 +1,9 @@
 .item-reviews__label {
   padding-left: 16px;
-}
-
-.item-reviews__label--radio {
-  @include text-form;
-  text-transform: none;
   display: block;
-  position: relative;
-  padding-left: 62px;
-  cursor: pointer;
-  height: 46px;
 }
 
+.item-reviews__label--radio,
 .item-reviews__label--checkbox {
   @include text-form;
   text-transform: none;
@@ -19,7 +11,7 @@
   position: relative;
   padding-left: 62px;
   cursor: pointer;
-  height: 46px;
+  min-height: 46px;
 }
 
 .item-reviews__input {
@@ -28,6 +20,23 @@
   border: none;
   width: 100%;
   padding: 16px;
+}
+
+.item-reviews__input:hover {
+  background-color: #e5e5e5;
+}
+
+.item-reviews__input:active {
+  background-color: $light;
+  outline: 4px solid #e5e5e5;
+}
+
+.item-reviews__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.item-reviews__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .item-reviews__input--phone {
@@ -43,6 +52,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-size: 58px;
+  padding-right: 75px;
 }
 
 .item-reviews__control-input[type="checkbox"]:checked + .item-reviews__control-mark::before {
@@ -54,6 +64,10 @@
   background-image: url("../../img/stack.svg#check-mark-icon");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.item-reviews__control-input[type="checkbox"]:checked + .item-reviews__control-mark:active::before {
+  opacity: 0.3;
 }
 
 .item-reviews__control-input[type="radio"]:checked + .item-reviews__control-mark::before {
@@ -68,6 +82,10 @@
   transform: translate(-50%, -50%);
 }
 
+.item-reviews__control-input[type="radio"]:checked + .item-reviews__control-mark:active::before {
+  background-color: #a5a5a5;
+}
+
 .item-reviews__control-mark {
   position: absolute;
   width: 46px;
@@ -78,12 +96,24 @@
   left: 0;
 }
 
+.item-reviews__control-mark:hover {
+  background-color: #e5e5e5;
+}
+
+.item-reviews__control-input:focus + .item-reviews__control-mark {
+  outline: 3px solid $dark;
+  background-color: #ffffff;
+}
+
+.item-reviews__control-mark:active {
+  background-color: #d5d5d5;
+}
+
 .item-reviews__control-mark--radio {
   border-radius: 50%;
 }
 
 .item-reviews__control-label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display: block;
+  padding-top: 10px;
 }

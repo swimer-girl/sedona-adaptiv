@@ -9,3 +9,12 @@
   border: none;
   display: block;
 }
+
+.button:hover {
+  background-color: #669ec0;
+}
+
+.button:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}

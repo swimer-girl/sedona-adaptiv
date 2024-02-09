@@ -16,10 +16,8 @@
 
 .like-button__icon {
   display: block;
-  -webkit-mask-image: url("../../img/stack.svg#like-icon"); /* stylelint-disable-line */
-  mask-image: url("../../img/stack.svg#like-icon"); /* stylelint-disable-line */
-  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
-  mask-repeat: no-repeat; /* stylelint-disable-line */
+  mask-image: url("../../img/stack.svg#like-icon");
+  mask-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.3);
   width: 23px;
   height: 22px;

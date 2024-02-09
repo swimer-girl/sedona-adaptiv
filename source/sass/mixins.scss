@@ -11,13 +11,6 @@
   color: $dark;
 }
 
-@mixin hero-title {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: $dark;
-}
-
 @mixin advantages-with-img {
   color: $light;
   background-color: $base-bg;

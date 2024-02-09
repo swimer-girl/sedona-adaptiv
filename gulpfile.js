@@ -168,14 +168,7 @@ export default gulp.series(
 
 //Deploy
 
-// const paths = {
-//   scripts: (
-//     src: 'source',
-//     dest: 'build',
-//   )
-// }
-
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});

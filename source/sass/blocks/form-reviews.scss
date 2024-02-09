@@ -7,6 +7,7 @@
 
 .form-reviews__title {
   @include title;
+  margin: 0 auto;
   text-align: center;
   padding-top: 24px;
 }
@@ -50,17 +51,17 @@
 }
 
 .form-reviews__group--emotions {
-  padding: 24px 20px 27px;
+  padding: 21px 20px 27px;
 }
 
 .form-reviews__button {
   text-align: right;
-  padding: 22px 20px;
+  padding: 23px 20px;
 }
 
 .form-reviews__send-button {
   width: 100%;
-  padding: 16px 49px;
+  padding: 16px 47px;
   font-size: 21px;
 }
 
@@ -82,7 +83,7 @@
   }
 
   .form-reviews__title {
-    font-size: 21px;
+    font-size: $tablet-title;
     padding-top: 83px;
   }
 
@@ -90,6 +91,7 @@
   .form-reviews__title--attractions,
   .form-reviews__title--emotions {
     padding-top: 0;
+    max-width: 60%;
   }
 
   .form-reviews__description {
@@ -209,7 +211,7 @@
   }
 
   .form-reviews__group--name {
-    padding: 8px 49px 70px 120px;
+    padding: 27px 49px 71px 120px;
   }
 
   .form-reviews__group--name::after {
@@ -255,6 +257,12 @@
 
   .form-reviews__title {
     padding-top: 0;
+  }
+
+  .form-reviews__title--impression,
+  .form-reviews__title--attractions,
+  .form-reviews__title--emotions {
+    max-width: 40%;
   }
 
   .form-reviews__button {

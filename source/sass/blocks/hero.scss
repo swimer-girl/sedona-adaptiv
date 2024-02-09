@@ -3,7 +3,7 @@
 }
 
 .hero__wrapper {
-  background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../../img/index-hero-background.jpg");
+  background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../../img/index-hero-background.webp");
   background-color: $base-bg;
   background-repeat: no-repeat;
   background-position: center bottom, 50% 30%;
@@ -28,16 +28,20 @@
 .hero__image {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
-.hero__image--inner {
+.hero__image-inner {
   display: block;
   margin: 0 auto;
+  width: 100%;
   max-width: 229px;
+  height: auto;
 }
 
 .hero__title {
-  @include hero-title;
+  @include title;
   margin: 0;
   margin-bottom: 25px;
 }
@@ -48,7 +52,7 @@
 
 @media (min-resolution: 2dppx) {
   .hero__wrapper {
-    background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../../img/index-hero-background@2x.jpg");
+    background-image: url("../../img/stack.svg#index-hero-zigzag"), url("../img/index-hero-background@2x.webp");
   }
 }
 
@@ -82,7 +86,7 @@
     height: 350px;
   }
 
-  .hero__image--inner {
+  .hero__image-inner {
     max-width: 457px;
   }
 

@@ -1,55 +1,61 @@
 .social__list {
   @include list-reset;
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
 }
 
 .social__item {
   background-color: $base-bg;
+  position: relative;
 }
 
-.social__link--vkontakte {
-  display: block;
-  width: 48px;
-  height: 48px;
-  -webkit-mask-image: url("../../img/stack.svg#vk-icon"); /* stylelint-disable-line */
-  mask-image: url("../../img/stack.svg#vk-icon"); /* stylelint-disable-line */
-  -webkit-mask-position: center; /* stylelint-disable-line */
-  mask-position: center; /* stylelint-disable-line */
-  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 24px 24px; /* stylelint-disable-line */
-  mask-size: 24px 24px; /* stylelint-disable-line */
-  background-color: $light;
+.social__item:hover {
+  background-color: #669ec0;
 }
 
-.social__link--telegram {
-  display: block;
-  width: 48px;
-  height: 48px;
-  -webkit-mask-image: url("../../img/stack.svg#telegram-icon"); /* stylelint-disable-line */
-  mask-image: url("../../img/stack.svg#telegram-icon"); /* stylelint-disable-line */
-  -webkit-mask-position: center; /* stylelint-disable-line */
-  mask-position: center; /* stylelint-disable-line */
-  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
-  mask-repeat: no-repeat; /* stylelint-disable-line */
-  -webkit-mask-size: 24px 24px; /* stylelint-disable-line */
-  mask-size: 24px 24px; /* stylelint-disable-line */
-  background-color: $light;
+.social__item:focus {
+  background-color: #669ec0;
 }
 
+.social__item:has(.social__link:focus)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 55px;
+  width: 55px;
+  border-radius: 4px;
+  border: 2px solid #000000;
+}
+
+.social__item:active {
+  background-color: #5496bd;
+  opacity: 0.3;
+}
+
+.social__link--vkontakte,
+.social__link--telegram,
 .social__link--youtube {
   display: block;
   width: 48px;
   height: 48px;
-  -webkit-mask-image: url("../../img/stack.svg#youtube-icon"); /* stylelint-disable-line */
-  mask-image: url("../../img/stack.svg#youtube-icon"); /* stylelint-disable-line */
-  -webkit-mask-position: center; /* stylelint-disable-line */
-  mask-position: center; /* stylelint-disable-line */
-  -webkit-mask-repeat: no-repeat; /* stylelint-disable-line */
-  mask-repeat: no-repeat; /* stylelint-disable-line */
-  -webkit-mask-size: 24px 24px; /* stylelint-disable-line */
-  mask-size: 24px 24px; /* stylelint-disable-line */
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 24px 24px;
   background-color: $light;
+}
+
+.social__link--vkontakte {
+  mask-image: url("../../img/stack.svg#vk-icon");
+}
+
+.social__link--telegram {
+  mask-image: url("../../img/stack.svg#telegram-icon");
+}
+
+.social__link--youtube {
+  mask-image: url("../../img/stack.svg#youtube-icon");
 }

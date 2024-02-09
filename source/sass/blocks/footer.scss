@@ -14,9 +14,27 @@
 
 .footer__copyright {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
+
+.footer__copyright:hover {
+  color: $base-bg;
+}
+
+.footer__copyright:hover svg {
+  fill: $base-bg;
+}
+
+.footer__copyright:active {
+  color: #b3b3b3;
+}
+
+.footer__copyright:active svg {
+  fill: #b3b3b3;
+}
+
 
 @media (min-width: $tablet-width) {
   .footer__tags {
@@ -25,6 +43,7 @@
 
   .footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 36px 60px;
