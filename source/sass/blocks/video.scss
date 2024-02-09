@@ -19,7 +19,7 @@
 }
 
 .video__play {
-  background-image: url("../../img/video-phone.webp");
+  background-image: url("../img/video-phone.webp");
   background-color: $base-bg;
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,7 +32,7 @@
 
 @media (min-resolution: 2dppx) {
   .video__play {
-    background-image: url("../../img/video-phone@2x.webp");
+    background-image: url("../img/video-phone@2x.webp");
   }
 }
 
@@ -42,14 +42,14 @@
   }
 
   .video__play {
-    background-image: url("../../img/video-desktop.webp");
+    background-image: url("../img/video-desktop.webp");
     background-repeat: no-repeat;
     height: 500px;
   }
 
   @media (min-resolution: 2dppx) {
     .video__play {
-      background-image: url("../../img/video-desktop@2x.webp");
+      background-image: url("../img/video-desktop@2x.webp");
     }
   }
 
